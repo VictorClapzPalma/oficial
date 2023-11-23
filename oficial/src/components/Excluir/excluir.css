@@ -1,0 +1,66 @@
+.section {
+  display: flex;
+  flex-direction: row;
+}
+.section .left {
+  font-family: font5;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  line-height: 3rem;
+  border-right: #FFD700 solid 4px;
+  background-color: #b2b2b2;
+  line-height: 5.5rem;
+  flex-direction: column;
+}
+.section .left h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: underline;
+}
+.section .left .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #FFD700;
+  margin: 50px;
+}
+.section .left .box label {
+  font-size: 25px;
+  color: white;
+}
+.section .left .box input {
+  width: 350px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  margin-left: 20px;
+  text-align: center;
+}
+.section .left .botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.section .left .botao .button {
+  border: none;
+  border-radius: 30px;
+  background-color: green;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 1060px) {
+  .section .left {
+    width: 100vw;
+    height: 100vh;
+  }
+}/*# sourceMappingURL=excluir.css.map */
