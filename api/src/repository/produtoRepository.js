@@ -69,3 +69,12 @@ export async function remover(id) {
   return info.affectedRows;
 }
 
+export async function inserirImg(id, caminho) {
+  const comando = `
+  UPDATE tabela_produtos
+  SET imagem_produto = ?
+  WHERE id_produto = ?
+  `
+  const [linhas] = await con.query(comando, [caminho, id]);
+  return linhas.affectedRows;
+}

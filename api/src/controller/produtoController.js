@@ -1,4 +1,4 @@
-import { listar, salvar, buscarPorNome, remover, alterar } from "../repository/produtoRepository.js";
+import { listar, salvar, buscarPorNome, remover, alterar, inserirImg} from "../repository/produtoRepository.js";
 import multer from 'multer'
 
 
