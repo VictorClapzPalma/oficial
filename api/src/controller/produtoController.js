@@ -1,10 +1,21 @@
 import { listar, salvar, buscarPorNome, remover, alterar } from "../repository/produtoRepository.js";
+import multer from 'multer'
 
 
 import { Router } from "express";
 const endpoints = Router();
 
 
+const upload = multer({ dest: './storage'})
+
+
+endpoints.put('/produtos/:id/img', upload.single('img'), async (req, resp) => {
+  let id = req.params.id;
+  let caminho = req.file.path;
+
+  let r = await inserirImg(id,caminho)
+  resp.status(202).send();
+})
 
 endpoints.post('/produtos', async (req, resp) => {
   try {

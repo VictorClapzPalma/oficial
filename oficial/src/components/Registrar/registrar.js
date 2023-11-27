@@ -62,6 +62,11 @@ async function alterarProduto(produtoId, novosDados) {
         }
         let r = await axios.put(`http://191.235.118.141:5000/produtos/${produtoId}`, novosDados);
 
+        const formData = new FormData();
+        formData.append('img', arquivo);
+        r = await axios.put(`http://191.235.118.141:5000/produtos/${produtoId}/img`,formData, {
+            headers: {'Content-Type': 'multipart/form-data'}
+        })
 
         if (r.status === 200) {
             alert('Cadastro alterado com sucesso.');
