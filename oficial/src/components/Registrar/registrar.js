@@ -104,7 +104,7 @@ async function alterarProduto(produtoId, novosDados) {
 
                 <div className="imagem">
                     <label for="nome">IMAGEM</label>
-                    <input type="file" name="imagem" id="imagem" onChange={e => setImagem(e.target.files[0])}/>
+                    <input type="file" name="imagem" id="imagem" onChange={e => setArquivo(e.target.files[0])}/>
                     </div>
 
                 <div className="descricao">
