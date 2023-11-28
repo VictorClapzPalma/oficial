@@ -58,7 +58,7 @@ const Home = () => {
       setCartItems([...cartItems, { ...produto, quantity: 1 }]);
     }
 
-    setTotal(total + produto.price);
+    setTotal(total.toFixed(2) + produto.price);
   };
 
   return (
