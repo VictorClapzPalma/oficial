@@ -33,13 +33,18 @@
     
     .logo{
         width: 900px;
-        color: #FFD700;
         margin-left: 3.3rem;
         display: flex;
         gap: 35px;
         justify-content: center;
         align-items: center;
-            h1{
+        a{
+            
+            text-decoration: none;
+        }
+            h1{ 
+                
+                color: #FFD700;
                 font-family: font1;
                 font-size: 3.2rem;
                 width: 450px;

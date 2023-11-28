@@ -19,7 +19,7 @@ const [arquivo, setArquivo] = useState()
 
 async function ListarProdutos() {
     try {
-        let r = await axios.get('http://localhost:5000/produtos');
+        let r = await axios.get('http://191.235.118.141/produtos');
         let produtos = r.data;
         setListaProduto(produtos);
     } catch (error) {
@@ -43,7 +43,7 @@ async function salvarProdutos() {
                 imagem:imagem,
             }
 
-            let r = await axios.post('http://localhost:5000/produtos', body);
+            let r = await axios.post('http://191.235.118.141/produtos', body);
             let id = r.data.id;
 
             alert('Produto cadastrado. Id ' + id);
@@ -60,7 +60,7 @@ async function alterarProduto(produtoId, novosDados) {
             alert('ID do produto não foi fornecido');
             return;
         }
-        let r = await axios.put(`http://localhost:5000/produtos/${produtoId}`, novosDados);
+        let r = await axios.put(`http://191.235.118.141/produtos/${produtoId}`, novosDados);
 
 
         if (r.status === 200) {
@@ -78,8 +78,7 @@ async function alterarProduto(produtoId, novosDados) {
 
 
     return( 
-        <>   
-    <body>
+        <>
         <Header className="header"/>
     <section className='sec'>
         <div className="left">
@@ -126,7 +125,6 @@ async function alterarProduto(produtoId, novosDados) {
         </div>
       <Right className="Right"/>
     </section>
-</body>
 </>
     )
 }

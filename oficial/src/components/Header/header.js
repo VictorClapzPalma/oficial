@@ -8,10 +8,15 @@ export default function Header(){
         <>
         <header class="header">
         <div class="logo">
-            <h1>
+           <a href="/">
+           <h1>
                 Brunch Time Treasure
             </h1>
+           </a>
+          
+            <a href="/registrar" >
             <img src={Profile}/>
+            </a>
         </div>
             
     </header>

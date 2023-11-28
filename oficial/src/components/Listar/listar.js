@@ -28,8 +28,6 @@ export default function Listar(){
 
     return(
         <>
-
-        
             <Header/>
             <div className="listagem">
         <section className="sec2">
