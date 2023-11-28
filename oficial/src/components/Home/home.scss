@@ -51,7 +51,7 @@ body {
         position: relative;
 
         img {
-          max-width: 1000px;
+          max-width: 700px;
           width: 100%;
           max-height: 900px;
           height: 100%;
@@ -164,15 +164,32 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .produto{
-    max-width: 200px;
-    max-height: 200px;
-  }
+  body{
+
   
-  .descricao{
-    display: none;
+    .main-section{
+      .produtos{
+        .produto{
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+      .carrinho{
+        width: 20%;
+        img{
+          width: 60px;
+        }
+      }
+    }
+
+    
+    .descricao{
+      display: none;
+    }
   }
 }
+
+
 
   @media screen and (max-width: 458px) {
 

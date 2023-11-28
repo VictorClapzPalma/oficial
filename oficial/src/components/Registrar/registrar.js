@@ -19,7 +19,7 @@ const [arquivo, setArquivo] = useState()
 
 async function ListarProdutos() {
     try {
-        let r = await axios.get('http://191.235.118.141:5000/produtos');
+        let r = await axios.get('http://localhost:5000/produtos');
         let produtos = r.data;
         setListaProduto(produtos);
     } catch (error) {
@@ -43,7 +43,7 @@ async function salvarProdutos() {
                 imagem:imagem,
             }
 
-            let r = await axios.post('http://191.235.118.141:5000/produtos', body);
+            let r = await axios.post('http://localhost:5000/produtos', body);
             let id = r.data.id;
 
             alert('Produto cadastrado. Id ' + id);
@@ -60,13 +60,8 @@ async function alterarProduto(produtoId, novosDados) {
             alert('ID do produto não foi fornecido');
             return;
         }
-        let r = await axios.put(`http://191.235.118.141:5000/produtos/${produtoId}`, novosDados);
+        let r = await axios.put(`http://localhost:5000/produtos/${produtoId}`, novosDados);
 
-        const formData = new FormData();
-        formData.append('img', arquivo);
-        r = await axios.put(`http://191.235.118.141:5000/produtos/${produtoId}/img`,formData, {
-            headers: {'Content-Type': 'multipart/form-data'}
-        })
 
         if (r.status === 200) {
             alert('Cadastro alterado com sucesso.');
@@ -104,7 +99,7 @@ async function alterarProduto(produtoId, novosDados) {
 
                 <div className="imagem">
                     <label for="nome">IMAGEM</label>
-                    <input type="file" name="imagem" id="imagem" onChange={e => setArquivo(e.target.files[0])}/>
+                    <input type="file" name="imagem" id="imagem" onChange={e => setImagem(e.target.files[0])}/>
                     </div>
 
                 <div className="descricao">

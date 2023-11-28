@@ -1,5 +1,6 @@
 import './header.scss'
-import Hamburguer from "../Hamburguer/hamburguer"
+import Profile from "../../assets/images/Profile.png"
+
 
 
 export default function Header(){
@@ -10,6 +11,7 @@ export default function Header(){
             <h1>
                 Brunch Time Treasure
             </h1>
+            <img src={Profile}/>
         </div>
             
     </header>
