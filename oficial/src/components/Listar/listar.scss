@@ -162,8 +162,14 @@
 
 }
 
+@media screen and (max-width:1600px){
+.right{
+    display: none;
+}
 
-@media screen and (max-width:768px) {
+}
+
+@media screen and (max-width:1068px) {
 
     .listagem{
         .sec2 {
