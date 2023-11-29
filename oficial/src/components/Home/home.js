@@ -19,19 +19,20 @@ const Home = () => {
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
 
-  const addToCart = (product) => {
-    const existingItem = cartItems.find((item) => item.id === product.id);
+  const addToCartHandler = (produto) => {
+    const existingItem = cartItems.find((item) => item.id === produto.id);
 
     if (existingItem) {
       const updatedCart = cartItems.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === produto.id ? { ...item, quantity: item.quantity + 1 } : item
       );
       setCartItems(updatedCart);
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      setCartItems([...cartItems, { ...produto, quantity: 1 }]);
     }
 
-    setTotal(total + product.price);
+    // Atualize esta linha para arredondar para cima e exibir apenas duas casas decimais
+    setTotal((prevTotal) => parseFloat((prevTotal + produto.price).toFixed(2)));
   };
 
   const produtos = [
@@ -46,24 +47,8 @@ const Home = () => {
     { id: 9, imgSrc: paoComOvo2, alt: 'ovo', price: 14.99, name: 'Pão com Ovo no Pao Italiano' },
   ];
 
-  const addToCartHandler = (produto) => {
-    const existingItem = cartItems.find((item) => item.id === produto.id);
-
-    if (existingItem) {
-      const updatedCart = cartItems.map((item) =>
-        item.id === produto.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      setCartItems(updatedCart);
-    } else {
-      setCartItems([...cartItems, { ...produto, quantity: 1 }]);
-    }
-
-    setTotal(total.toFixed(2) + produto.price);
-  };
-
   return (
     <>
-
       <Header />
       <section className="main-section">
         <div className="produtos">
@@ -93,11 +78,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <Footer/>
     </>
   );
 }
 
 export default Home;
-
