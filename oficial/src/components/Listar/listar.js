@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Right from "../Right/right";
 import Header from "../Header/header"
 import "./listar.scss"
@@ -76,7 +75,6 @@ export default function Listar(){
             
             </>
     )
-=======
 import Right from "../Right/right";
 import Header from "../Header/header"
 import "./listar.scss"
@@ -154,5 +152,4 @@ export default function Listar(){
             
             </>
     )
->>>>>>> 4f78147d15e54d4375df3894fa3a906882cf6dae
 }
