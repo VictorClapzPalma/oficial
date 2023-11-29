@@ -130,3 +130,4 @@ async function alterarProduto(produtoId, novosDados) {
 }
 
 export default Registrar;
+
