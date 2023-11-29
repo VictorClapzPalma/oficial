@@ -32,7 +32,7 @@ const Home = () => {
     }
 
     // Atualize esta linha para arredondar para cima e exibir apenas duas casas decimais
-    setTotal((prevTotal) => parseFloat((prevTotal + produto.price).toFixed(2)));
+    setTotal((prevTotal) => prevTotal + produto.price);
   };
 
   const produtos = [
