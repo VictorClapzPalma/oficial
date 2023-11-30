@@ -18,7 +18,7 @@ export default function Listar(){
 
     async function ListarProdutos() {
         try {
-            let r = await axios.get('http://localhost:5000/produtos');
+            let r = await axios.get('http://191.235.118.141:5000/produtos');
             let produtos = r.data;
             setListaProduto(produtos);
         } catch (error) {

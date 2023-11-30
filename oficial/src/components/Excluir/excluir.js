@@ -14,7 +14,7 @@ const Excluir = () => {
 
     async function excluirProduto(produtoId) {
         try {
-            const response = await axios.delete(`http://localhost:5000/produtos/${produtoId}`);
+            const response = await axios.delete(`http://191.235.118.141:5000/produtos/${produtoId}`);
 
             if (response.status === 200) {
                 alert('Produto excluído com sucesso.');
@@ -30,7 +30,7 @@ const Excluir = () => {
 
     async function ListarProdutos() {
         try {
-            let r = await axios.get('http://localhost:5000/produtos');
+            let r = await axios.get('http://191.235.118.141:5000/produtos');
             let produtos = r.data;
             setListaProduto(produtos);
         } catch (error) {
