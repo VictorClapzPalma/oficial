@@ -13,7 +13,7 @@ import panqueca3 from "../../assets/images/Frame6.png";
 import panqueca4 from "../../assets/images/Frame7.png";
 import paoComOvo2 from "../../assets/images/Ovo.png";
 
-import Footer from "../Footer/footer"
+
 
 const Home = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -78,7 +78,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer/>
     </>
   );
 }
